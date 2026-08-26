@@ -1,8 +1,6 @@
 # ReconAI — Multi-Source Transaction Reconciler
 Multi-Source Transaction Reconciler
 
-# ReconAI — Multi-Source Transaction Reconciler
-
 **AI Finance Controller for real-world cash reconciliation** — built for Razorpay Buildathon (Track 04).
 
 ## Problem
@@ -31,7 +29,7 @@ Finance teams manually reconcile ledger entries (internal books) against bank st
 ## How to Run Locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ReconAI-Rzp_Hackathon_2026.git
+git clone https://github.com/ASAlokSharma/ReconAI-Rzp_Hackathon_2026.git
 cd ReconAI-Rzp_Hackathon_2026
 pip install -r requirements.txt
 streamlit run app.py
@@ -52,3 +50,28 @@ To see the full pipeline (data prep → training → evaluation → agent reason
 - **Dataset:** [BenchRec cash reconciliation dataset](https://www.kaggle.com/) (ICAIF 2023 Benchmark Competition) — see `data/README.md`
 
 ## Repository Structure
+ReconAI-Rzp_Hackathon_2026/
+├── README.md
+├── requirements.txt
+├── app.py # Streamlit dashboard
+├── notebooks/
+│ └── ReconAI_Full_Pipeline.ipynb
+├── artifacts/
+│ ├── recon_model.pkl
+│ ├── recon_scaler.pkl
+│ ├── recon_config.json
+│ └── pairs_features_for_app.csv
+└── data/
+└── README.md # dataset source & download instructions
+
+
+## Limitations
+
+- Pairwise classification struggles inherently with N:N match groups where multiple transactions share identical amounts — flagged and explored in-depth rather than glossed over.
+- Date-diff feature dominance can cause rare mismatched-amount false Auto-Matches (see FX case in Key Findings).
+- Gemini free-tier quota (20 requests/day) can limit how many live agent calls are demoed in one sitting.
+- This is a benchmark/prototype system — not yet hardened for production-scale reconciliation volumes.
+
+## Team / Submission
+
+Built for **Razorpay Buildathon 2026 — Track 04: AI Finance Controller**.
