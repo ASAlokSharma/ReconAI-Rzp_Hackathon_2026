@@ -1,0 +1,12 @@
+{
+  "feature_cols": [
+    "amt_diff",
+    "amt_diff_pct_capped",
+    "date_diff",
+    "text_sim"
+  ],
+  "AMT_CLOSE_THRESHOLD": 0.01,
+  "DATE_CLOSE_THRESHOLD": 3,
+  "auto_match_threshold": 0.95,
+  "needs_review_threshold": 0.5
+}

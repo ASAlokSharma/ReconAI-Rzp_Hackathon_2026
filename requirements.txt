@@ -1,0 +1,9 @@
+streamlit
+scikit-learn
+pandas
+numpy
+google-adk
+rapidfuzz
+matplotlib
+seaborn
+pyngrok
